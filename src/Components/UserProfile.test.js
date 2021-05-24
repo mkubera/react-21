@@ -4,12 +4,14 @@ import UserProfile from "./UserProfile";
 const props = {
   name: "K",
   email: "k@is.ok",
+  userType: "director",
+  isEditing: true,
 };
 
 test("renders user data", () => {
-  render(<UserProfile name={props.name} email={props.email} />);
-  const nameElement = screen.getByText(`User's name is ${props.name}`);
-  const emailElement = screen.getByText(`Email ${props.email}`);
+  render(<UserProfile {...props} onClickFn={(e) => e} />);
+  const nameElement = screen.getByText(props.name);
+  const emailElement = screen.getByText(props.email);
   expect(nameElement).toBeInTheDocument();
   expect(emailElement).toBeInTheDocument();
 });

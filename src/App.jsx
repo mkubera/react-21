@@ -1,26 +1,42 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import UserProfile from "./Components/UserProfile";
 
 const App = () => {
+  const onClickFn = (data) => {
+    console.log(data);
+  };
+
+  const state = {
+    users: [
+      {
+        name: "Jakub",
+        email: "doo@boo.boo",
+        userType: "employee",
+        isLoggedIn: true,
+      },
+      {
+        name: "Kasia",
+        email: "doo@boo.boo",
+        userType: "visitor",
+        isEditing: false,
+      },
+      {
+        name: "Katarzyna",
+        email: "kat@a.rzyna",
+        userType: "director",
+        isEditing: true,
+      },
+    ],
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <UserProfile name="Jakub" email="doo@boo.boo" />
-        <UserProfile name="Kasia" email="doo@boo.boo" />
-
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello world</h1>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
+        <h1>Users App</h1>
+        {state.users.map((user, idx) => (
+          <UserProfile {...user} key={idx} onClickFn={onClickFn} />
+        ))}
       </header>
     </div>
   );
