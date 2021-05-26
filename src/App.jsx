@@ -1,6 +1,7 @@
 // import logo from "./logo.svg";
 import "./App.css";
 import UserProfile from "./Components/UserProfile";
+import Painters from "./Components/Painters";
 
 const App = () => {
   const onClickFn = (data) => {
@@ -32,6 +33,8 @@ const App = () => {
 
   return (
     <div className="App">
+      <Painters isOrdered={true} />
+      <h1 style={true ? { width: "10%" } : { width: "100%" }}>hello</h1>
       <header className="App-header">
         <h1>Users App</h1>
         {state.users.map((user, idx) => (

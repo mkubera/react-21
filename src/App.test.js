@@ -7,8 +7,8 @@ test("renders app title", () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test("doesn't render app title", () => {
-  render(<App />);
-  const linkElement = screen.not.getByText(/doesn't Users App/i);
-  expect(linkElement).not.toBeInTheDocument();
-});
+// test("doesn't render app title", () => {
+//   render(<App />);
+//   const linkElement = screen.not.getByText(/doesn't Users App/i);
+//   expect(linkElement).not.toBeInTheDocument();
+// });
