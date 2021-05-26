@@ -2,6 +2,7 @@
 import "./App.css";
 import UserProfile from "./Components/UserProfile";
 import Painters from "./Components/Painters";
+import Albums from "./Components/Albums";
 
 const App = () => {
   const onClickFn = (data) => {
@@ -33,6 +34,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <Albums />
       <Painters isOrdered={true} />
       <h1 style={true ? { width: "10%" } : { width: "100%" }}>hello</h1>
       <header className="App-header">
