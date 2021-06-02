@@ -1,8 +1,8 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import UserProfile from "./Components/UserProfile";
-import Painters from "./Components/Painters";
-import Albums from "./Components/Albums";
+// import UserProfile from "./Components/UserProfile";
+// import Painters from "./Components/Painters";
+// import Albums from "./Components/Albums";
 import React, { Component } from "react";
 
 class App extends Component {
