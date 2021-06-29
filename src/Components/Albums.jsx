@@ -51,8 +51,11 @@ const Albums = ({ url }) => {
     const newAlbum = {
       title: "Perdition City",
       author: "Ulver",
-      year: 2000,
-      songs: [{ name: "Lost in moments", length: "7:13" }],
+      year: 2002,
+      songs: [
+        { name: "Lost in moments", length: "7:13" },
+        { name: "Future sound of music", lenght: "5:15" },
+      ],
     };
     const newAlbums = [...albums, newAlbum];
     setAlbums(newAlbums);
