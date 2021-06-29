@@ -1,19 +1,20 @@
 import "./UserProfile.css";
-import UserProfileEdit from "./UserProfileEdit";
+// import UserProfileEdit from "./UserProfileEdit";
 
-const UserProfile = ({ name, email, onClickFn }) => {
-  const onInputFn = (e) => {
-    let newName = e.target.value;
-    console.log(newName.length);
-  };
+const UserProfile = ({ id, name, email, updateUser }) => {
+  // const onInputFn = (e) => {
+  //   let newName = e.target.value;
+  //   console.log(newName.length);
+  // };
+  const newName = name.split("").reverse().join("");
 
   return (
     <div className="user">
       <h1>{name}</h1>
       <h2>{email}</h2>
-      <button onClick={() => onClickFn(name)}> edit </button>
+      <button onClick={() => updateUser(id, newName)}> edit </button>
 
-      <section>
+      {/* <section>
         <div>
           Change user name:{" "}
           <UserProfileEdit
@@ -30,7 +31,7 @@ const UserProfile = ({ name, email, onClickFn }) => {
             placeholder="enter your email address"
           />
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
